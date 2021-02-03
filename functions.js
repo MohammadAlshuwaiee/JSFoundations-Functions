@@ -6,22 +6,46 @@
  * e.g.
  * greet("Hamza") logs "Hello Hamza"
  */
-function greet(name) {
-  // Your code here
+// function greet(name) 
+
+function greet(Name) {
+  
+  console.log(`Hello ${Name}`);
+return Name
+
 }
 
-/**
- * isOdd(n):
- * - receives a number n
- * - returns true if it's odd, false otherwise
- *
- * e.g.
- * isOdd(7) -> true
- * isOdd(10) -> false
- */
+greet("Mohammad")
+
+
+
+
+// /**
+//  * isOdd(n):
+//  * - receives a number n
+//  * - returns true if it's odd, false otherwise
+//  *
+//  * e.g.
+//  * isOdd(7) -> true
+//  * isOdd(10) -> false
+//  */
+// // function isOdd(n)
+
 function isOdd(n) {
-  // Your code here
+
+  if (n % 2 ===1) {
+    return n
+      console.log(true)
+    }
+    else{
+      return n
+      console.log(false)
+    }
 }
+
+isOdd(8)
+
+// isOdd(7)
 
 /**
  * oddsSmallerThan(n):
@@ -32,9 +56,11 @@ function isOdd(n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
-function oddsSmallerThan(n) {
-  // Your code here
-}
+  function  oddsSmallerThan(n) {
+  if (n % 2 == 0 ||n % 2 == 1)
+  return parseInt (n/2);
+  }
+console.log(oddsSmallerThan(7))
 
 /**
  * squareOrDouble(n):
@@ -46,8 +72,19 @@ function oddsSmallerThan(n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
-function squareOrDouble(n) {
-  // Your code here
-}
+// function squareOrDouble(n) {
 
-module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
+function squareOrDouble (i) {
+    let result = 0;
+    if (i % 2 ==0){
+        result = i + i;
+        return result;
+    }
+    else if (i % 3 ==0) {
+        result = i * 2;
+        return result;
+    }
+}
+console.log(squareOrDouble(21))
+
+ module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
